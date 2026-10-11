@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BDH — Batalha do Hugo</title>
 <meta name="theme-color" content="#111111">
+<meta name="description" content="BDH — Batalha do Hugo. Acompanhe MCs, trios confirmados, eventos, rankings e resultados das batalhas de rima.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -39,6 +39,12 @@ footer{text-align:center;background:#181818;padding:25px;color:#aaa;border-top:2
 footer a{color:#ff5555}
 .small{color:#aaa;font-size:13px;margin-top:10px}
 .resultado{background:#202020;padding:15px;border-radius:8px;margin-top:12px;overflow-wrap:anywhere}
+.campeao{text-align:center;padding:25px 10px}
+.trofeu{font-size:65px;line-height:1.5}
+.selo{color:#ffcc33;font-size:13px;font-weight:bold;letter-spacing:3px}
+.nome-campeao{font-size:clamp(42px,10vw,64px);font-weight:900;color:#ffcc33;line-height:1.2;margin:12px 0;text-shadow:0 0 20px #ffcc3333}
+.nacional{display:inline-block;border:1px solid #66501d;background:#29210e;color:#ffda70;border-radius:6px;padding:6px 14px;margin:10px 0}
+@media(max-width:480px){.hero{padding:55px 16px}section{padding:35px 15px}.evento{padding:20px}nav a{padding:7px 9px}}
 </style>
 </head>
 <body>
@@ -117,10 +123,22 @@ footer a{color:#ff5555}
 </section>
 
 <section id="resultados">
-  <h2>📊 Resultados das batalhas</h2>
-  <div class="card">
-    <h3>Aguardando resultados</h3>
-    <p>Os resultados oficiais serão divulgados nesta seção após as batalhas.</p>
+  <h2>🏆 Resultados das batalhas</h2>
+
+  <div class="evento">
+    <span class="tag">RESULTADO OFICIAL</span>
+
+    <div style="text-align:center">
+      <div class="nacional">🇧🇷 CATEGORIA NACIONAL</div>
+      <h3>NACIONAL</h3>
+
+      <div class="campeao">
+        <div class="trofeu">🏆</div>
+        <p class="selo">CAMPEÃO NACIONAL</p>
+        <div class="nome-campeao">CDJ</div>
+        <p>O campeão da Nacional!</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -136,20 +154,26 @@ footer a{color:#ff5555}
   <h2>📝 Inscrição de MCs</h2>
   <div class="card">
     <p style="margin-bottom:16px">Quer participar? Preencha os dados e gere sua mensagem de inscrição para enviar à organização.</p>
+
     <form id="formInscricao">
       <label for="nome">Nome artístico</label>
       <input id="nome" name="nome" placeholder="Ex.: MC Relâmpago" required>
+
       <label for="idade">Idade</label>
       <input id="idade" name="idade" type="number" min="13" max="99" placeholder="Sua idade" required>
+
       <label for="arroba">TikTok ou contato</label>
       <input id="arroba" name="arroba" placeholder="@seuperfil" required>
+
       <label for="experiencia">Fale um pouco sobre você</label>
       <textarea id="experiencia" name="experiencia" placeholder="Seu estilo de rima e experiência..."></textarea>
+
       <button class="btn" type="submit">GERAR INSCRIÇÃO</button>
     </form>
+
     <div id="saida" class="resultado" hidden>
       <h3>Inscrição pronta!</h3>
-      <pre id="mensagem" style="white-space:pre-wrap;margin:10px 0"></pre>
+      <pre id="mensagem" style="white-space:pre-wrap;margin:10px 0;font-family:Arial,sans-serif"></pre>
       <button class="btn" id="copiar" type="button">COPIAR MENSAGEM</button>
       <a class="btn" href="https://www.tiktok.com/@batalhaderima0014" target="_blank" rel="noopener">FALAR COM A BDH</a>
       <p class="small">A inscrição só será enviada quando você entrar em contato com a organização.</p>
@@ -202,6 +226,7 @@ Quero participar das batalhas da BDH!`;
 
 document.getElementById("copiar").addEventListener("click", async function() {
   const texto = mensagem.textContent;
+
   try {
     await navigator.clipboard.writeText(texto);
     this.textContent = "COPIADO!";
@@ -218,5 +243,4 @@ document.getElementById("copiar").addEventListener("click", async function() {
 </script>
 
 </body>
-        </html>
-        
+</html>
