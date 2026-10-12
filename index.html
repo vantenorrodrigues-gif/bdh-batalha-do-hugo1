@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111111">
-<meta name="description" content="BDH — Batalha do Hugo. Batalhas de rima, MCs confirmados e eventos.">
+<meta name="description" content="BDH — Batalha do Hugo. MCs confirmados, eventos e resultados das batalhas de rima.">
 <title>BDH — Batalha do Hugo</title>
 
 <style>
@@ -27,7 +26,7 @@ nav a:hover{color:#e32636}
 .hero p{color:#ccc;max-width:600px;margin:0 auto 25px}
 .btn{display:inline-block;background:#e32636;color:white;padding:12px 20px;border:0;border-radius:6px;font-weight:bold;cursor:pointer}
 .btn:hover{background:#b81726}
-section{padding:55px 6%}
+section{padding:55px 6%;scroll-margin-top:90px}
 .section-title{text-align:center;margin-bottom:30px}
 .section-title h2{font-size:clamp(27px,5vw,40px);text-transform:uppercase}
 .section-title p{color:#aaa;font-size:14px;margin-top:8px}
@@ -36,11 +35,11 @@ section{padding:55px 6%}
 .stat strong{font-size:25px;color:#e32636;display:block}
 .stat span{font-size:11px;color:#bbb}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.card{background:#151519;border:1px solid #303036;border-radius:12px;padding:22px;transition:.2s}
+.card{background:#151519;border:1px solid #303036;border-radius:12px;padding:22px;transition:.2s;overflow-wrap:anywhere}
 .card:hover{border-color:#e32636;transform:translateY(-3px)}
 .card .icon{font-size:32px}
 .card h3{font-size:21px;margin:12px 0 5px}
-.card p{font-size:13px;color:#bbb;overflow-wrap:anywhere}
+.card p{font-size:13px;color:#bbb}
 .tag{display:inline-block;margin-top:14px;background:#321015;color:#ff747d;border:1px solid #79202a;padding:5px 9px;border-radius:4px;font-size:10px;font-weight:bold}
 .dark{background:#101013}
 .featured{border-color:#e32636}
@@ -48,12 +47,13 @@ section{padding:55px 6%}
 form{display:grid;gap:12px;max-width:650px;margin:auto}
 input,textarea{width:100%;background:#17171b;border:1px solid #38383e;color:white;padding:13px;border-radius:6px;font:inherit}
 textarea{min-height:100px;resize:vertical}
-label{font-size:13px;font-weight:bold;color:#ddd}
+label{font-size:13px;font-weight:bold;color:#ddd;display:block;margin-bottom:5px}
 .form-note{color:#999;font-size:12px}
 footer{background:#080809;border-top:1px solid #28282c;padding:30px 6%;text-align:center;color:#999;font-size:12px}
 footer strong{color:#fff}
 footer a{color:#ff555f}
 hr{border:0;border-top:1px solid #29292d;margin:20px 0}
+[hidden]{display:none!important}
 @media(max-width:600px){
 header{padding:13px 4%}
 nav{justify-content:center}
@@ -77,6 +77,8 @@ section{padding:42px 5%}
 <a href="#trios">TRIOS</a>
 <a href="#eventos">EVENTOS</a>
 <a href="#ranking">RANKING</a>
+<a href="#resultados">RESULTADOS</a>
+<a href="#galeria">GALERIA</a>
 <a href="#inscricao">INSCRIÇÃO</a>
 <a href="#sobre">SOBRE</a>
 </div>
@@ -84,15 +86,17 @@ section{padding:42px 5%}
 </header>
 
 <main>
+
 <section class="hero" id="inicio">
 <small>RIMA • RESPEITO • ATITUDE</small>
 <h1>BATALHA<br>DO <span>HUGO</span></h1>
 <p>O talento entra na roda. A rima decide. Bem-vindo à BDH, onde cada MC tem a chance de mostrar sua voz.</p>
 <a class="btn" href="#mcs">CONHEÇA OS MCs</a>
+
 <div class="stats">
 <div class="stat"><strong>5</strong><span>MCs CONFIRMADOS</span></div>
 <div class="stat"><strong>1</strong><span>TRIO CONFIRMADO</span></div>
-<div class="stat"><strong>BDH</strong><span>NOSSA BATALHA</span></div>
+<div class="stat"><strong>1 ANO</strong><span>HISTÓRIA DA BDH</span></div>
 </div>
 </section>
 
@@ -102,6 +106,7 @@ section{padding:42px 5%}
 <h2>MCs confirmados</h2>
 <p>Esses são os MCs confirmados pela organização.</p>
 </div>
+
 <div class="cards">
 <article class="card">
 <div class="icon">🎤</div>
@@ -148,6 +153,7 @@ section{padding:42px 5%}
 <h2>Trio confirmado</h2>
 <p>O time que vai representar na BDH.</p>
 </div>
+
 <div class="cards">
 <article class="card featured">
 <div class="icon">🏆</div>
@@ -158,15 +164,34 @@ section{padding:42px 5%}
 </div>
 </section>
 
+<!-- EVENTOS -->
 <section id="eventos">
 <div class="section-title">
 <small>FIQUE LIGADO</small>
-<h2>Próximos eventos</h2>
-<p>Confira os anúncios oficiais da organização.</p>
+<h2>Eventos da BDH</h2>
+<p>Acompanhe os anúncios oficiais da organização.</p>
 </div>
-<div class="empty">
-<p>📢 Nenhum evento anunciado por enquanto.</p>
-<p>Em breve, novas informações!</p>
+
+<div class="cards">
+<article class="card featured">
+<div class="icon">🎂</div>
+<span class="tag">EVENTO ESPECIAL</span>
+<h3>BDH — 1 ANO</h3>
+<p>Um ano de rimas, disputas, talentos e história! A BDH celebra sua trajetória com a comunidade que faz tudo acontecer.</p>
+<hr>
+<p><strong>🎤 Evento:</strong> Aniversário de 1 ano da BDH</p>
+<p><strong>📅 Data:</strong> Veja no TikTok oficial.</p>
+<p><strong>📍 Local:</strong> Veja no TikTok oficial.</p>
+<p><strong>🕒 Horário:</strong> Veja no TikTok oficial.</p>
+<a class="btn" href="https://www.tiktok.com/@batalhaderima0014" target="_blank" rel="noopener noreferrer" style="margin-top:16px">VER TIKTOK OFICIAL</a>
+</article>
+
+<article class="card">
+<div class="icon">🎤</div>
+<h3>Próximas batalhas</h3>
+<p>Fique ligado no TikTok oficial para acompanhar novos eventos e anúncios.</p>
+<span class="tag">ACOMPANHE AS NOVIDADES</span>
+</article>
 </div>
 </section>
 
@@ -174,18 +199,28 @@ section{padding:42px 5%}
 <div class="section-title">
 <small>QUEM DOMINA A RODA?</small>
 <h2>Ranking da BDH</h2>
-<p>Os resultados serão publicados após as batalhas.</p>
+<p>Classificação oficial dos MCs.</p>
 </div>
 <div class="empty">🏆 O ranking oficial ainda não foi divulgado.</div>
 </section>
 
 <section id="resultados">
 <div class="section-title">
-<small>FICOU REGISTRADO</small>
+<small>OS CAMPEÕES DA RODA</small>
 <h2>Resultados das batalhas</h2>
-<p>Confira os resultados oficiais.</p>
+<p>Confira os resultados registrados pela BDH.</p>
 </div>
-<div class="empty">⚔️ Ainda não há resultados publicados.</div>
+
+<div class="cards">
+<article class="card featured">
+<div class="icon">🇧🇷</div>
+<span class="tag">CAMPEÃO NACIONAL</span>
+<h3>NACIONAL</h3>
+<hr>
+<p>🏆 <strong>Campeão: CDJ</strong></p>
+<p>Resultado nacional registrado na seção de resultados da BDH.</p>
+</article>
+</div>
 </section>
 
 <section class="dark" id="galeria">
@@ -201,32 +236,46 @@ section{padding:42px 5%}
 <div class="section-title">
 <small>QUER ENTRAR NA RODA?</small>
 <h2>Inscrição de MCs</h2>
-<p>Preencha os dados para preparar sua mensagem de inscrição.</p>
+<p>Preencha os dados e prepare sua inscrição.</p>
 </div>
+
 <form id="formInscricao">
 <div>
 <label for="nome">Nome artístico / nome de MC</label>
-<input id="nome" placeholder="Ex.: MC Exemplo" required>
+<input id="nome" name="nome" placeholder="Ex.: MC Exemplo" required>
 </div>
+
 <div>
 <label for="idade">Idade</label>
-<input id="idade" type="number" min="1" max="100" placeholder="Sua idade" required>
+<input id="idade" name="idade" type="number" min="1" max="100" placeholder="Sua idade" required>
 </div>
+
 <div>
 <label for="tiktok">TikTok ou contato</label>
-<input id="tiktok" placeholder="@seuperfil" required>
+<input id="tiktok" name="tiktok" placeholder="@seuperfil" required>
 </div>
+
 <div>
 <label for="tempo">Há quanto tempo você rima?</label>
-<input id="tempo" placeholder="Ex.: 3 meses" required>
+<input id="tempo" name="tempo" placeholder="Ex.: 3 meses" required>
 </div>
+
 <div>
 <label for="estilo">Qual é seu estilo de rima?</label>
-<textarea id="estilo" placeholder="Conte um pouco sobre suas rimas..." required></textarea>
+<textarea id="estilo" name="estilo" placeholder="Conte um pouco sobre suas rimas..." required></textarea>
 </div>
-<button class="btn" type="submit">ENVIAR INSCRIÇÃO</button>
-<p class="form-note">O botão abrirá o WhatsApp com sua mensagem pronta. Você precisará enviá-la para a organização.</p>
+
+<button class="btn" type="submit">PREPARAR INSCRIÇÃO</button>
+<p class="form-note">Depois de preparar a mensagem, copie o texto e entre em contato com a organização pelo TikTok oficial. Nenhum dado é enviado automaticamente.</p>
 </form>
+
+<div id="resultadoInscricao" class="card" hidden style="max-width:650px;margin:25px auto 0">
+<h3>Sua inscrição está pronta!</h3>
+<textarea id="mensagemInscricao" readonly aria-label="Mensagem de inscrição"></textarea>
+<button class="btn" type="button" id="copiarInscricao">COPIAR INSCRIÇÃO</button>
+<a class="btn" href="https://www.tiktok.com/@batalhaderima0014" target="_blank" rel="noopener noreferrer" style="margin-top:10px">ABRIR TIKTOK DA BDH</a>
+<p class="form-note" style="margin-top:10px">Copie a mensagem e envie à organização pelo TikTok.</p>
+</div>
 </section>
 
 <section class="dark" id="sobre">
@@ -234,6 +283,7 @@ section{padding:42px 5%}
 <small>MAIS QUE UMA BATALHA</small>
 <h2>Sobre a BDH</h2>
 </div>
+
 <div class="card">
 <p>A <strong>BDH — Batalha do Hugo</strong> é um espaço para valorizar a cultura das batalhas de rima, revelar talentos e reunir MCs em um ambiente de respeito e competição.</p>
 <hr>
@@ -244,6 +294,7 @@ section{padding:42px 5%}
 <p>🔥 Competição na rima, respeito fora dela.</p>
 </div>
 </section>
+
 </main>
 
 <footer>
@@ -266,16 +317,34 @@ document.getElementById("formInscricao").addEventListener("submit", function(eve
   const estilo = document.getElementById("estilo").value.trim();
 
   const mensagem =
-    "Olá, organização da BDH! Quero me inscrever como MC.\n\n" +
+    "INSCRIÇÃO — BDH BATALHA DO HUGO\n\n" +
     "Nome artístico: " + nome + "\n" +
     "Idade: " + idade + "\n" +
     "TikTok/contato: " + tiktok + "\n" +
     "Tempo rimando: " + tempo + "\n" +
-    "Estilo: " + estilo;
+    "Estilo de rima: " + estilo + "\n\n" +
+    "Inscrição preparada para enviar à organização pelo TikTok.";
 
-  const url = "https://wa.me/?text=" + encodeURIComponent(mensagem);
-  window.open(url, "_blank");
+  document.getElementById("mensagemInscricao").value = mensagem;
+  document.getElementById("resultadoInscricao").hidden = false;
+  document.getElementById("resultadoInscricao").scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+});
+
+document.getElementById("copiarInscricao").addEventListener("click", async function() {
+  const campo = document.getElementById("mensagemInscricao");
+
+  try {
+    await navigator.clipboard.writeText(campo.value);
+    this.textContent = "INSCRIÇÃO COPIADA!";
+  } catch (erro) {
+    campo.focus();
+    campo.select();
+    this.textContent = "SELECIONE E COPIE O TEXTO";
+  }
 });
 </script>
 </body>
-</html>
+  </html>
